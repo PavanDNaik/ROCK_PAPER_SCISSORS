@@ -9,8 +9,8 @@ const result = document.getElementById("result");
 const body = document.querySelector("body");
 const display = document.createElement("div");
 const decider = document.createElement("div");
-
-
+const replay = document.createElement('button');
+replay.textContent = "Replay";
 function compute(){
     let val = Math.floor(Math.random() * 3);
     return val;
@@ -42,14 +42,10 @@ function play(generated,user){
 };
 
 
-function game(userChoice){    
+function game(userChoice){
     if(lose >= 5 || wins >= 5)
     {
-        body.removeChild(display);
-        body.removeChild(decider);
-        wins = 0;
-        lose = 0;
-        draws = 0;
+        return;
     }
     let computerChoice = compute();
 
@@ -77,7 +73,7 @@ function game(userChoice){
 
 function endGame(){
 
-    let res = `<br/>Number of wins: ${wins}<br/>Number of draw: ${draws}<br/>Number of lose: ${lose}<br/>`
+    let res = `<br/>Number of wins: ${wins}<br/>Number of draw: ${draws}<br/>Number of lose: ${lose}<br/></br>`;
     let output;
     if(lose >= 5)
     {
@@ -91,6 +87,19 @@ function endGame(){
     decider.textContent = output;
     body.appendChild(display);
     body.appendChild(decider);
+    body.appendChild(replay);
+    //reset Everything
+    replay.addEventListener("click",()=>{
+        body.removeChild(display);
+        body.removeChild(decider);
+        wins = 0;
+        lose = 0;
+        draws = 0;
+        result.textContent = "";
+        w.textContent = "";
+        l.textContent = "";
+        body.removeChild(replay);
+    });
 }
 
 const rock = document.getElementById("rock");
@@ -103,7 +112,4 @@ rock.addEventListener("click",()=>{  game(0); });
 paper.addEventListener("click",()=>{  game(1); });
 
 scissor.addEventListener("click",()=>{  game(2); });
-
-
-
 
