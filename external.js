@@ -7,10 +7,12 @@ const w = document.getElementById("W");
 const l = document.getElementById("L");
 const result = document.getElementById("result");
 const body = document.querySelector("body");
-const display = document.createElement("div");
-const decider = document.createElement("div");
+
+const display = document.getElementById("display");
+const decider = document.getElementById("decider");
 const replay = document.createElement('button');
-replay.textContent = "Replay";
+replay.innerHTML = `<img style="height: 50px; width: auto; border-radius: 10px" src="replay.png" alt="replay"></img>`;
+
 function compute(){
     let val = Math.floor(Math.random() * 3);
     return val;
@@ -85,19 +87,17 @@ function endGame(){
 
     display.innerHTML = res;
     decider.textContent = output;
-    body.appendChild(display);
-    body.appendChild(decider);
     body.appendChild(replay);
     //reset Everything
     replay.addEventListener("click",()=>{
-        body.removeChild(display);
-        body.removeChild(decider);
         wins = 0;
         lose = 0;
         draws = 0;
         result.textContent = "";
         w.textContent = "";
         l.textContent = "";
+        display.innerHTML = "";
+        decider.textContent = "";
         body.removeChild(replay);
     });
 }
