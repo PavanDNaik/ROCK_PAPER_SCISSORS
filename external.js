@@ -11,7 +11,7 @@ const body = document.querySelector("body");
 const display = document.getElementById("display");
 const decider = document.getElementById("decider");
 const replay = document.createElement('button');
-replay.innerHTML = `<img style="height: 50px; width: auto; border-radius: 10px" src="replay.png" alt="replay"></img>`;
+replay.innerHTML = `<img style="height: 50px; width: auto; border-radius: 10px" src="images/replay.webp" alt="replay"></img>`;
 
 function compute(){
     let val = Math.floor(Math.random() * 3);
@@ -75,7 +75,7 @@ function game(userChoice){
 
 function endGame(){
 
-    let res = `<br/>Number of wins: ${wins}<br/>Number of draw: ${draws}<br/>Number of lose: ${lose}<br/></br>`;
+    let res = `<br/>Number of wins: ${wins}<br/><br/>Number of draw: ${draws}<br/><br/>Number of lose: ${lose}<br/></br>`;
     let output;
     if(lose >= 5)
     {
@@ -88,14 +88,14 @@ function endGame(){
     display.innerHTML = res;
     decider.textContent = output;
     body.appendChild(replay);
+    result.textContent = "";
+    w.textContent = "";
+    l.textContent = "";
     //reset Everything
     replay.addEventListener("click",()=>{
         wins = 0;
         lose = 0;
         draws = 0;
-        result.textContent = "";
-        w.textContent = "";
-        l.textContent = "";
         display.innerHTML = "";
         decider.textContent = "";
         body.removeChild(replay);

@@ -1,12 +1,13 @@
 body {
     height: 100vh;
     font-family: 'Courier New', Courier, monospace;
-    background-color: rgb(53, 42, 140);
+    background-color: rgb(12, 10, 24);
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 img {
@@ -20,20 +21,33 @@ img {
 button {
     border: 0;
     padding: 0px;
-    background-color: rgb(53, 42, 140); 
+    background-color: rgb(12, 10, 24); 
     border-radius: 24px;    
     
 }
 
 button :hover {
-    filter: drop-shadow(5px 5px 5px red);
+    filter: drop-shadow(5px 5px 5px rgb(29, 210, 226));
     transform: scale(0.95);
 }
 
 #container1{
     margin-top: 20px;
+    display: flex;
+    gap: 20px;
 }
 
 #container2{
-    margin-top: 20px;
+    margin-top: 45px;
+
+}
+
+#result {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+div {
+    margin-top: 10px;
+    margin-top: 10px;
 }
