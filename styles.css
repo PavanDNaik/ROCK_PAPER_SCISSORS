@@ -8,7 +8,10 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    
 }
+
+
 
 img {
     height: 200px;
@@ -26,9 +29,10 @@ button {
     
 }
 
-button :hover {
+button :active {
     filter: drop-shadow(5px 5px 5px rgb(29, 210, 226));
     transform: scale(0.95);
+    transition: 0.4s;
 }
 
 #container1{
@@ -37,9 +41,16 @@ button :hover {
     gap: 20px;
 }
 
+.transit {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(12, 10, 24);
+    color: white;
+}
+
 #container2{
     margin-top: 45px;
-
+    font-size: x-large;
+    font-weight: 700;
 }
 
 #result {

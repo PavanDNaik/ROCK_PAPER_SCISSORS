@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,21 +9,24 @@
     <script src="external.js" defer></script>
     <link href="styles.css" rel="stylesheet">
 </head>
+
 <body>
-        <h1>Rock-Paper-Scissor</h1>
-        <div id="container1">
-            <button  id="rock" class="rock_button"><img src="images/rock.png" alt="rock"></button>
-            <button  id="paper" class="rock_button"><img src="images/paper.png" alt="paper"></button>
-            <button  id="scissor" class="rock_button"><img src="images/scissors.png" alt="scissor"></button>
-        </div>
-       <div id="container2">
-        <div id="result"></div>
+    <h1>Rock-Paper-Scissor</h1>
+    <h2>First to win 5 points wins the game </h2>
+    <div id="container1">
+        <button id="rock" class="rock_button"><img src="images/rock.png" alt="rock"></button>
+        <button id="paper" class="rock_button"><img src="images/paper.png" alt="paper"></button>
+        <button id="scissor" class="rock_button"><img src="images/scissors.png" alt="scissor"></button>
+    </div>
+    <div id="container2">
+        <div id="result" class="transit"></div>
         <div class="scores">
-            <div id="W"></div>
-            <div id="L"></div>
+            <div id="W" class="transit"></div>
+            <div id="L" class="transit"></div>
         </div>
-        <div id="decider"></div>
-        <div id="display"></div>
-       </div>
-</body>     
+        <div id="decider" class="transit"></div>
+        <div id="display" class="transit"></div>
+    </div>
+</body>
+
 </html>
